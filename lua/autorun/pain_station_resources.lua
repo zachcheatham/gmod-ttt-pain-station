@@ -1,1 +1,0 @@
-resource.AddFile("materials/vgui/ttt/icon_z_pain_station.vmt")
