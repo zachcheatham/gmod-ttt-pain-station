@@ -17,7 +17,7 @@ if CLIENT then
 		desc = "An explosive disguised as a Health Station.\nPlayers will explode when they attempt to use it.\n\nIf a Traitor uses it, the Pain Station will\nlose \"health\"."
 	};
 
-	SWEP.Icon = "VGUI/ttt/icon_z_pain_station"
+	SWEP.Icon = "VGUI/ttt/icon_eis_pain_station"
 end
 
 SWEP.Base = "weapon_tttbase"
@@ -72,7 +72,7 @@ function SWEP:HealthDrop()
 		local vsrc = ply:GetShootPos()
 		local vang = ply:GetAimVector()
 		local vvel = ply:GetVelocity()
-		
+
 		local vthrow = vvel + vang * 200
 
 		local health = ents.Create("ttt_pain_station")
@@ -86,7 +86,7 @@ function SWEP:HealthDrop()
 			local phys = health:GetPhysicsObject()
 			if IsValid(phys) then
 				phys:SetVelocity(vthrow)
-			end	
+			end
 
 			self:Remove()
 			self.Planted = true
